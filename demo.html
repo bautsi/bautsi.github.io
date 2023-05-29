@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>問就是梭哈</title>
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+    <h1>澳門首家線上賭場正式上線啦</h1>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div>
+        <label>1-10選一個</label>
+        <input id="1st" type="number" value=""/>
+        <label>1-10選一個</label>
+        <input id="2nd" type="number" value=""/>
+        <label>1-10選一個</label>
+        <input id="3rd" type="number" value=""/>
+
+        <input id=""btn type="button" value="Submit"/>
+        <button onClick="window.location.reload();">reset</button>
+        Result:<p class="summary"></ul></p>
+    </div>
+    <script>
+            var summary = document.querySelector('.summary');
+
+            document.getElementById('btn').onclick = function(){
+            var result='';
+            var 1st=parseInt(document.getElementById('1st').value);
+            var 2nd=parseInt(document.getElementById('2nd').value);
+            var 3rd=parseInt(document.getElementById('3rd').value);
+            var randomnumber1 = Math.floor(Math.random() * 10) + 1;
+            var randomnumber2 = Math.floor(Math.random() * 10) + 11;
+            var randomnumber3 = Math.floor(Math.random() * 10) + 21;
+
+
+            if( 1st==randomnumber1 && 2nd==randomnumber2 && 3rd==randomnumber3){
+                text = '頭獎88888祝您一路發'
+            }
+            else if( 1st==randomnumber1 && 2nd==randomnumber2 && 3rd!=randomnumber3 ){
+                text = '二獎2222祝您一世當老二'
+            }
+            else if( 1st!=randomnumber1 && 2nd==randomnumber2 && 3rd==randomnumber3 ){
+                text = '二獎2222祝您一世當老二'
+            }
+            else if( 1st==randomnumber1 && 2nd!=randomnumber2 && 3rd==randomnumber3 ){
+                text = '二獎2222祝您一世當老二'
+            }
+            else if( select!=randomnumber1 && 2nd!=randomnumber2 && 3rd!=randomnumber3 ){
+                text = '再接再厲不要放棄'
+            }
+            else if( 1st==0 || 2nd==0 || 3rd){
+                text = '再亂按直接送勞改'
+            }
+            else{
+                text = '三獎333讓你潸然淚下'
+            }
+            summary.innerHTML=result;
+        }
+    </script>
+</body>
+</html>

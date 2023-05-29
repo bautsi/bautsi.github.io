@@ -1,0 +1,17 @@
+h1 {
+    text-align: center;
+}
+h2 {
+    text-align: center;
+}
+body {
+    background-image: url(./nice.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50% 20%;
+}
+select{
+    width: 300px;
+    text-align-last: center;
+    outline: 0;
+}
